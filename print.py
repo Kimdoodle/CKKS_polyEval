@@ -14,20 +14,10 @@ def print_poly(poly: list[float], title: str="다항식: ") -> None:
             else:
                 print(f"{mark}{coeff}(x^{i})", end='')
                 
-def print_poly_type(poly: list[float], title: str="타입: ") -> None:
-    type_codes = []
-    for coeff in poly:
-        if coeff == 0:
-            type_codes.append('0')
-        elif coeff.is_integer():
-            type_codes.append('I')
-        else:
-            type_codes.append('F')
-            
+def print_poly_type(poly_type: list[str], title: str="타입: ") -> None:
     if title:
         print(title, end='')
-        
-    print(f"({', '.join(type_codes)})")
+    print(f"({', '.join(poly_type)})")
 
 def print_poly_sep(i: int, poly_p: list[float], poly_q: list[float]) -> None:
     # 다항식 분해
